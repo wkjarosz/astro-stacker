@@ -50,7 +50,7 @@ Average all `dark-frame*.dng` files in `input/` directory with no demosaicing (`
 
 ### Align and stack a set of raw files
 
-Align and stack all input `.dng` files without any calibration frames (uses automatic black-point). Uses the first image in alphabetical order as the base frame to align all other images to:
+Align and stack all input `.dng` files without any calibration frames (uses automatic black-point):
 ```
 ./astro_stacker.py -o "output/aligned-" "input/"*.dng
 ```
