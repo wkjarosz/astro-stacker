@@ -57,18 +57,18 @@ Align and stack all input `.dng` files without any calibration frames (uses auto
 
 The above uses the first image in alphabetical order as the base frame to align all other images to. If you want to specify which image should be the base image, use the `-b` option:
 ```
-./astro_stacker.py -b "input/align-all-to-this-frame.dng" -o "output/aligned-" "input/"*.dng
+./astro_stacker.py -b "input/align-all-to-this-one.dng" -o "output/aligned-" "input/"*.dng
 ```
 The base image can already be in the list of input files, or be an additional image.
 
 Instead of using automatic black-point, subtract master dark frame (assumed to be a 16bpp linearly encoded grayscale PNG) from each image before aligning and stacking:
 ```
-./astro_stacker.py -d "master-dark-frame.png" -o "output/aligned-" "input/"*.dng
+./astro_stacker.py -d "master-dark.png" -o "output/aligned-" "input/"*.dng
 ```
 
 Additionally use a master flat frame (again, assumed to be a 16bpp linearly encoded grayscale PNG) to compensate for vignetting and other non-uniformities like dust:
 ```
-./astro_stacker.py -d "master-dark-frame.png" -f "master-flat-frame.png" -o "output/aligned-" "input/"*.dng
+./astro_stacker.py -d "master-dark.png" -f "master-flat.png" -o "output/aligned-" "input/"*.dng
 ```
 
 
